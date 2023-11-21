@@ -1,0 +1,22 @@
+/*PARTE DEL NAVBAR*/
+/* Estilos Generales*/
+html{
+    font-family: system-ui;    /*Se va ha plicar a toda la pagina */
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none; /*quita lo surrayado de un link*/
+}
+
+li{
+ list-style: none;   
+}
+
+.hero{
+    
+}
