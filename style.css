@@ -1,182 +1,236 @@
-html{
-    font-family: system-ui;    /*Se va ha plicar a toda la pagina */
+/*------------------------------ Estilos de Generales a toda la pagina ----------------------------------------*/
+html {
+  font-family: system-ui; /*Se va ha plicar a toda la pagina */
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #2c2c2c;
-    /*#2c2c2c*/
+body {
+  margin: 0;
+  padding: 0;
+ /* background-color: #2c2c2c;*/    /*fondo de la pagina*/
 }
 
-a{
-    text-decoration: none; /*quita lo surrayado de un link*/
+a {
+  text-decoration: none; /*quita lo surrayado de un link*/
 }
 
-li{
- list-style: none;   
+li {
+  list-style: none;
 }
 
-/* --------------------------------------------*/
-.hero{
-    background: url() center;
-    background-size: cover;
-    height: 100vh;   
-}
-/* --------------------------------------------*/
+/*----------------------------------- Estilos de Navbar ------------------------------------------------------*/
 
-header.main-header{
+header.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #000000;
+  z-index: 999;
+}
+
+.wrap-logo-header {
+  display: flex;
+  align-items: center;
+  flex-basis: 15%;
+}
+
+.wrap-logo-header img {
+  width: 50px;
+}
+
+.logo-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffc300;
+}
+
+.logo-header pre {
+  font-family: system-ui;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-wrap-header {
+  display: flex;
+  flex-basis: 50%;
+}
+
+ul.main-menu {
+  display: flex;
+  width: 100%;
+  z-index: 99;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+ul.main-menu #nav-main-contact {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(45deg, yellow, red);
+  color: #ffffff;
+}
+
+li.menu-item {
+  margin: 0.75rem;
+  display: flex;
+}
+
+li.menu-item a {
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+}
+
+li.menu-item a:hover {
+  color: #ffc300;
+}
+
+i.toggle-menu {
+  display: none;
+  background-color: #000000;
+  border: linear-gradient(45deg, yellow, red);
+  z-index: 9999;
+}
+
+i.toggle-menu img {
+  width: 27px;
+  z-index: 99;
+}
+
+input#check {
+  display: none;
+}
+
+@media (min-width: 880px) {
+  .header-wrap {
+    padding: 0.5rem 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    margin-bottom: 4rem;
+  }
+  .header-wrap {
     position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 9999;
-  }
-   
-  .header-wrap{
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
     background-color: #000000;
-    z-index: 999;
-  }
-
-  .wrap-logo-header{
-    display: flex;
-    align-items: center;
-    flex-basis: 15%;
-  }
-  .wrap-logo-header img{
-    width: 50px;
-  }
-   
-  .logo-header{
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #FFC300 ;
-  }
-
-  .logo-header pre{
-    font-family: system-ui; 
-  }
-
-  .nav-header{
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-   
-  .nav-wrap-header{
-    display: flex;
-    flex-basis: 50%;
-  }
-   
-  ul.main-menu{
-    display: flex;
-    width: 100%;
-    z-index: 99;
-    margin: 0;
     padding: 0;
-    justify-content: space-between;
+    top: 0;
+    z-index: 9999;
+    height: 60px;
+  }
+  .wrap-logo-header {
+    position: fixed;
+    z-index: 999;
+    top: 0.9%;
+    left: 3%;
+  }
+  .wrap-logo-header img {
+    width: 34px;
+  }
+  .logo-header {
     font-size: 1.1rem;
   }
-   
-  ul.main-menu #nav-main-contact{
+  i.toggle-menu {
     display: flex;
-    align-items: center;
-    padding: .5rem 1rem;
-    border-radius: .5rem;
-    background: linear-gradient(45deg, yellow, red);
-    color: #ffffff;
+    cursor: pointer;          /*al pasar el curso sobre las 3rallitas se pone pone la manita de oprimir*/
   }
-   
-  li.menu-item{
-    margin: .75rem;
-    display: flex;
-  }
-   
-  li.menu-item a{
-    padding: .5rem 1rem;
-    color: #ffffff;
-  }
-   
-  li.menu-item a:hover{
-    color: #FFC300;
-  }
-   
-  i.toggle-menu{
+  ul.main-menu,
+  #nav-main-contact {
     display: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  ul.main-menu {
+    position: fixed;
     background-color: #000000;
-    border: linear-gradient(45deg, yellow, red);
+  }
+  label.checkbtn {
+    position: fixed;
+    right: 3%;
+    top: 3%;
     z-index: 9999;
   }
-   
-  i.toggle-menu img{
-    width: 27px;
-    z-index: 99;
+  #check:checked ~ ul {
+    display: flex;
+    z-index: 9;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    top: 0;
+    font-size: 2rem;
+    transition: all;
   }
+}
 
-  input#check{
-    display: none;
-  }
+/*----------------------------------- Estilos del Menu ------------------------------------------------------*/
 
-  @media (min-width:880px){
-    .header-wrap{
-      padding: .5rem 5rem;
-    }
+.wrap{
+  max-width: 1200px;
+  margin: 43px auto;           /*separado de la parte de arriba de la pagina*/
+  text-align: center;     
+}
+
+.column-3{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 1rem;                       /*espaciado de cada columna*/
+  row-gap: 1rem;                       
+}
+
+.menu-restaurante{
+  color: #000000;                         /*color de letra*/
+  text-align: center;                       /*texto centrado*/
+  background-repeat: no-repeat;
+  border-radius: 7px;                       /*esquinas redondas*/
+  display: flex;
+  flex-flow: column;
+}
+
+hr{
+  background-color: #ffc300;
+  height: 3px;                            /*ancho*/
+  width: 40px;   
+  border: none;                         /*largo*/
+}
+
+.precio-menu{
+  font-weight: bold;
+}
+.precio-menu span{
+  font-size: 2rem;                        /*Tamaño del precio*/
+  color: #ffc300;                       /*Color del precio*/
+}
+
+@media(max-width:768px){
+  .columns{
+    grid-template-columns: repeat(2, 1fr);        /*cuando tenga cierto tamaño la pantalla solo se mostarar 2 tablas*/
   }
-   
-  @media (max-width:768px){
-    header{
-      margin-bottom: 4rem;
-    }
-    .header-wrap{
-      position: fixed;
-      width: 100%;
-      background-color: #000000;
-      padding: 0;
-      top: 0;
-      z-index: 9999;
-      height: 60px;
-    }
-    .wrap-logo-header{
-      position: fixed;
-      z-index: 999;
-      top: .9%;
-      left: 3%;
-    }
-    .wrap-logo-header img{
-      width: 34px;
-    }
-    .logo-header{
-      font-size: 1.1rem;
-    }
-    i.toggle-menu{
-      display: flex;
-    }
-    ul.main-menu,#nav-main-contact{
-      display: none;
-      left: 0;
-      margin: 0;
-      padding: 0;
-    }
-    ul.main-menu{
-      position: fixed;
-      background-color: #000000;
-    }
-    label.checkbtn{
-      position: fixed;
-      right: 3%;
-      top: 3%;
-      z-index: 9999;
-    }
-    #check:checked ~ ul{
-      display: flex;
-      z-index: 9;
-      flex-flow: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      top: 0;
-      font-size: 2rem;
-    }
+}
+
+@media(max-width:480px){
+  .columns{
+    grid-template-columns: repeat(1, 1fr);        /*cuando tenga cierto tamaño la pantalla solo se mostarar 1 tablas*/
   }
+}
+
+/*----------------------------------- Estilos de ------------------------------------------------------*/
+
+
+
