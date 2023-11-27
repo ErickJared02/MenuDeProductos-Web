@@ -1,8 +1,7 @@
 /*------------------------------ Estilos de Generales a toda la pagina ----------------------------------------*/
-html {
+html{
   font-family: system-ui; /*Se va ha plicar a toda la pagina */
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -30,7 +29,7 @@ header.main-header {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #000000;
+  background-color: #141414;
   z-index: 999;
 }
 
@@ -95,7 +94,7 @@ li.menu-item a {
 }
 
 li.menu-item a:hover {
-  color: #ffc300;
+  color: #ffc300;                           /* al pasar el curso cambia de color*/
 }
 
 i.toggle-menu {
@@ -114,76 +113,11 @@ input#check {
   display: none;
 }
 
-@media (min-width: 880px) {
-  .header-wrap {
-    padding: 0.5rem 5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    margin-bottom: 4rem;
-  }
-  .header-wrap {
-    position: fixed;
-    width: 100%;
-    background-color: #000000;
-    padding: 0;
-    top: 0;
-    z-index: 9999;
-    height: 60px;
-  }
-  .wrap-logo-header {
-    position: fixed;
-    z-index: 999;
-    top: 0.9%;
-    left: 3%;
-  }
-  .wrap-logo-header img {
-    width: 34px;
-  }
-  .logo-header {
-    font-size: 1.1rem;
-  }
-  i.toggle-menu {
-    display: flex;
-    cursor: pointer;          /*al pasar el curso sobre las 3rallitas se pone pone la manita de oprimir*/
-  }
-  ul.main-menu,
-  #nav-main-contact {
-    display: none;
-    left: 0;
-    margin: 0;
-    padding: 0;
-  }
-  ul.main-menu {
-    position: fixed;
-    background-color: #000000;
-  }
-  label.checkbtn {
-    position: fixed;
-    right: 3%;
-    top: 3%;
-    z-index: 9999;
-  }
-  #check:checked ~ ul {
-    display: flex;
-    z-index: 9;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    top: 0;
-    font-size: 2rem;
-    transition: all;
-  }
-}
-
 /*----------------------------------- Estilos del Menu ------------------------------------------------------*/
 
 .wrap{
   max-width: 1200px;
-  margin: 43px auto;           /*separado de la parte de arriba de la pagina*/
+  margin: 90px auto;           /*separado de la parte de arriba de la pagina*/
   text-align: center;     
 }
 
@@ -218,9 +152,153 @@ hr{
   color: #ffc300;                       /*Color del precio*/
 }
 
-@media(max-width:768px){
+/*----------------------------------- Estilos del Footer -----------------------------------------------------*/
+
+footer{
+  background-color: #141414;
+  color: var(--second-c);
+}
+footer ul{
+  padding:0;
+}
+footer li{
+  list-style: none;
+}
+.wrap-footer{
+  display: grid;
+  grid-template-columns: 30% 15% 15% 20%;       /*som los espacios de la columna*/
+  column-gap: 5%;                            /*espaciado de cada colummna*/
+  padding: 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  color: #ffffff;
+}
+.logo-element_footer{
+  display: flex;
+  margin: 2rem 0;
+}
+.logo-element_footer img{
+  max-height: 75px;
+}
+.element-footer h5{
+  margin: 1rem 0;
+}
+.text-element-footer li{
+  line-height: 2;
+}
+
+.text-element-footer li a{
+  color: #ffc300;
+}
+
+.text-element-footer li a:hover{
+  color: #ffffff;                          /*al pasar el cursor sobre el cambia de color*/
+}
+
+.rrss-element-footer ul{
+  display: flex;
+  flex-flow: wrap;                         /*esto hacer casndo no quepa bien disminuya grdualmente*/
+}
+.rrss-element-footer img{
+  width: 35px;
+}
+.rrss-element-footer li{
+  margin-right: 1rem;                     /*sapracion de cada logo*/
+}
+.footer-creds{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  color: #576171;
+  font-size: .9rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.legal-creds ul{
+  display: flex;
+  flex-flow: row;
+}
+.legal-creds ul li{
+  padding-right: 1rem;
+}
+.legal-creds ul a{
+  color: #ffffff;
+  font-size: .9rem;
+}
+
+/*----------------------------------- Para hacerlo responsive -----------------------------------------------------*/
+
+@media (min-width: 880px) {
+  .header-wrap {
+    padding: 0.5rem 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    margin-bottom: 4rem;
+  }
+  .header-wrap {
+    position: fixed;
+    width: 100%;
+    background-color: #000000;
+    padding: 0;
+    top: 0;
+    z-index: 9999;
+    height: 60px;
+  }
+  .wrap-logo-header {
+    position: fixed;
+    z-index: 999;
+    top: 0.9%;
+    left: 3%;
+  }
+  .wrap-logo-header img {
+    width: 34px;
+  }
+  .logo-header {
+    font-size: 1.1rem;
+  }
+  i.toggle-menu {
+    display: flex;
+    cursor: pointer;          /*al pasar el curso sobre las 3 rallitas se pone pone la manita de oprimir*/
+  }
+  ul.main-menu,
+  #nav-main-contact {
+    display: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  ul.main-menu {
+    position: fixed;
+    background-color: #000000;
+  }
+  label.checkbtn {
+    position: fixed;
+    right: 3%;
+    top: 3%;
+    z-index: 9999;
+  }
+  #check:checked ~ ul {
+    display: flex;
+    z-index: 9;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    top: 0;
+    font-size: 2rem;
+    transition: all;
+  }
+  /*responsive del menu*/
   .columns{
     grid-template-columns: repeat(2, 1fr);        /*cuando tenga cierto tamaño la pantalla solo se mostarar 2 tablas*/
+  }
+
+  /*responsive del footer*/
+  .wrap-footer{
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
@@ -228,9 +306,14 @@ hr{
   .columns{
     grid-template-columns: repeat(1, 1fr);        /*cuando tenga cierto tamaño la pantalla solo se mostarar 1 tablas*/
   }
+  /*responsive del footer*/
+  .wrap-footer{
+    grid-template-columns: repeat(1,1fr);
+  }
 }
 
-/*----------------------------------- Estilos de ------------------------------------------------------*/
-
-
-
+@media (max-width:320px){
+  .footer-creds{
+    flex-flow: column;
+  }
+}
