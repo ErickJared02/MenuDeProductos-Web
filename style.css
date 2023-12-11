@@ -12,9 +12,9 @@ a {
   text-decoration: none; /*quita lo surrayado de un link*/
 }
 
-li {
+/*li {
   list-style: none;
-}
+}*/
 
 /*----------------------------------- Estilos de Navbar ------------------------------------------------------*/
 
@@ -86,15 +86,18 @@ ul.main-menu #nav-main-contact {
 li.menu-item {
   margin: 0.75rem;
   display: flex;
+  list-style: none;
 }
 
 li.menu-item a {
   padding: 0.5rem 1rem;
   color: #ffffff;
+  list-style: none;
 }
 
 li.menu-item a:hover {
   color: #ffc300;                           /* al pasar el curso cambia de color*/
+  list-style: none;
 }
 
 i.toggle-menu {
@@ -117,7 +120,7 @@ input#check {
 
 .wrap{
   max-width: 1200px;
-  margin: 90px auto;           /*separado de la parte de arriba de la pagina*/
+  margin: 85px auto;           /*separado de la parte de arriba de la pagina*/
   text-align: center;     
 }
 
@@ -135,6 +138,7 @@ input#check {
   border-radius: 7px;                       /*esquinas redondas*/
   display: flex;
   flex-flow: column;
+  padding: 20px auto 20px 10px;
 }
 
 hr{
@@ -150,6 +154,13 @@ hr{
 .precio-menu span{
   font-size: 2rem;                        /*Tamaño del precio*/
   color: #ffc300;                       /*Color del precio*/
+}
+
+.play{
+  text-align: justify;
+  color: #070707;
+  list-style-type: disc;
+  margin: 0px 46px;
 }
 
 /*----------------------------------- Estilos del Footer -----------------------------------------------------*/
